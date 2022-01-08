@@ -3,7 +3,7 @@
 
 Legal Game Companion is a telegram bot developed by Darren and Boon Juey during Hack&Roll 2022. 
 
-It servesas a blackjack card counter and probability calculator, as well as a mahjong tile tracker for beginners.
+It serves as a blackjack card counter and probability calculator, as well as a mahjong tile tracker for beginners.
 
 ### Built With
 
