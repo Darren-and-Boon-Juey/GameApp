@@ -7,7 +7,6 @@ It serves as a blackjack card counter and probability calculator, as well as a m
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python3](https://www.python.org/)
 * [telebot](https://github.com/eternnoir/pyTelegramBotAPI#telebot)
 
@@ -26,6 +25,12 @@ Create a project at https://replit.com/new/python3
 3. Set up a new bot in Telegram via @botfather, and acquire the API_KEY
 4. Save the API_KEY in the Replit project under Secrets (Environment Variables)
 5. Run main.py
+
+
+<!-- SUGGESTIONS -->
+## Suggestions
+
+Deploying on a platform like Heroku instead of running on Replit will make sure the bot can continuously run. When deployed, a database service like MongoDB Atlas can be used to better manage storage of user session data.
 
 
 <!-- LICENSE -->
