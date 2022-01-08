@@ -58,7 +58,7 @@ def start(message):
 
   if message.chat.type == "private":
     #chat_user = message.chat.first_name
-    bot.reply_to(message, "Hi! I am Marie")
+    bot.reply_to(message, "Hi! I am Jack Ma(h)")
   """  
   else:
     chat_user = message.id
