@@ -14,13 +14,30 @@ class BlackjackGame:
         self.available.add(curr_card)
   
 
-  def discard(self, cards):
+ def discard(self, cards):
 
     print(f"in discard now. cards: {cards}")
+    """
+    Bug that caused an error when doing blackjack discard S10C4C9
+
     if len(cards[0]) % 2 == 1:
       return "Your input is invalid! Please check that there are no typos!"
+    """
+    try:
+      card_list = self.get_cards_sequence(cards)
+    except:
+      return "Your input is invalid! Please check that there are no typos!"
     
-    card_list = self.get_cards_sequence(cards)
+    
+    for card in card_list:
+      if card in self.discard_pile:
+        return "One of the cards you typed in is already in the discarded pile!"
+    
+    for card in card_list:
+      self.available.remove(card)
+      self.discard_pile.add(card)
+
+    return "Table updated!"
     
     
     
