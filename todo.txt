@@ -1,0 +1,15 @@
+high priority:
+done1. (mahjong) no direction causes app to break
+done2. Invalid commands at bot level ie tell the user to refer to commands sheet
+done3. (mahjong) help page for mahjong required to explain syntax
+done4. (mahjong) animals and flowers get deducted but not shown in hand
+5. done(mahjong) handle non-valid tiles
+6. done(mahjong) discard need to have some testing
+
+low priority
+1. can still do action if not enough tile in pool
+
+
+UX:
+done1. for mahjong, bot should reply every time.
+done2. standardise our replies.
