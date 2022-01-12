@@ -2,10 +2,10 @@ import os
 import telebot
 
 from telebot.types import BotCommand
-from database import session
-from backend.mahjong_logic import MahjongGame
-from backend.blackjack_logic import BlackjackGame
-from help_info import blackjack_info, mahjong_info, generic_info
+from backend.storage.database import session
+from backend.logic.mahjong_logic import MahjongGame
+from backend.logic.blackjack_logic import BlackjackGame
+from backend.info.help_info import blackjack_info, mahjong_info, generic_info
 from keys import API_KEY
 
 # HackNRollFruitStoreBot

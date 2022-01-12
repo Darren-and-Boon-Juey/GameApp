@@ -1,4 +1,4 @@
-from database import TileIcons
+from backend.storage.database import TileIcons
 
 class MahjongGame:
     def __init__(self):

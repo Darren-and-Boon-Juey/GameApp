@@ -1,4 +1,4 @@
-from colors import color
+from backend.misc.colors import color
 
 blackjack_info = f"""
 The following are the conventions we are using:
