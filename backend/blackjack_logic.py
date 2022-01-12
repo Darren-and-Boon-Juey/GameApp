@@ -13,8 +13,8 @@ class BlackjackGame:
         curr_card = typ + royal
         self.available.add(curr_card)
   
-
- def discard(self, cards):
+  
+  def discard(self, cards):
 
     print(f"in discard now. cards: {cards}")
     """
@@ -37,7 +37,16 @@ class BlackjackGame:
       self.available.remove(card)
       self.discard_pile.add(card)
 
-    return "Table updated!"
+    return f"""
+    The game's state has been updated! The follow cards have been added to the discarded pile:
+    {card_list}.
+
+    The discarded cards are:
+    {self.discard_pile}
+
+    The remaining cards are:
+    {self.available}
+    """
     
     
     
@@ -56,11 +65,8 @@ class BlackjackGame:
     pass
   
   def get_probability_info(self, house_card_lst_sequence, your_cards_lst_sequence):
-    # Task: calculate Pr(win | your_cards_lst)
-    #                 = Pr(win n your_cards_lst) / Pr(your_cards_lst)
-    #
-    # Pr(win) = Pr(you > house)
-    # your deck is fixed rn
+    # Pr(win) = Pr(you > house) 
+    # = Pr(your_hand < 21 && house_hand < 21 && your_hand > house_hand) + Pr(your_hand < 21 && house_hand > 21)
     remaining = set(self.available)
 
     print(f"your_cards_lst_sequence: {your_cards_lst_sequence}")
@@ -78,13 +84,6 @@ class BlackjackGame:
     house_value = self.calculate_value(house_card_lst_sequence)
     your_value = self.calculate_value(your_cards_lst_sequence)
     
-    print(f"your_cards_lst: {your_cards_lst}")
-    print(f"house_card_lst: {house_card_lst}")
-    print(f"house_value: {house_value}")
-    print(f"your_value: {your_value}")
-
-    stats_str = ""
-
     # draw condition. OPTIONAL. because it is actually quite hard.
     # Case1: hand == house and hand <= 21 and house <= 21
     # Case2: hand > 21 and house > 21
@@ -122,9 +121,13 @@ class BlackjackGame:
 
     win_probability = (case1_prob + case2_prob) * 100
     
-    stats_str += f"Win probability: {round(win_probability, 2)}%"
+    message = f"""
+    Your hand's value: {your_value}
+    The house's value: {house_value}
+    Win probability: {round(win_probability, 2)}%
+    """
     
-    return stats_str
+    return message
 
 
 
